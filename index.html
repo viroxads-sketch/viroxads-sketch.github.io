@@ -15,7 +15,6 @@
             background-color: #f9f9f9;
             color: #333;
         }
-        /* الهيدر وشعار الشركة */
         header {
             text-align: center;
             padding: 40px 20px 20px 20px;
@@ -35,7 +34,6 @@
             letter-spacing: 1px;
             text-transform: uppercase;
         }
-        /* القائمة العلوية */
         nav {
             display: flex;
             justify-content: center;
@@ -55,7 +53,6 @@
         nav a:hover, nav a.active {
             color: #007bff;
         }
-        /* قسم العرض الرئيسي (Hero Section) */
         .hero {
             background: linear-gradient(135deg, #007bff, #00d2ff);
             color: white;
@@ -85,7 +82,6 @@
         .btn-download:hover {
             background: #333;
         }
-        /* قسم عرض الألعاب بالأسفل */
         .games-section {
             max-width: 1000px;
             margin: 50px auto;
@@ -116,7 +112,6 @@
             margin-bottom: 15px;
             color: #222;
         }
-        /* الفوتر (Bottom) */
         footer {
             text-align: center;
             padding: 30px;
@@ -129,45 +124,40 @@
 </head>
 <body>
 
-    <!-- الهيدر -->
     <header>
         <div class="logo">VIROX GAMES</div>
         <div class="tagline">Mobile Games Made For Fun, Friends, and Family</div>
     </header>
 
-    <!-- شريط التنقل -->
     <nav>
         <a href="#" class="active">GAMES</a>
-        <a href="#">ABOUT</a>
-        <a href="#">PRIVACY POLICY</a>
-        <a href="#">SUPPORT</a>
+        <a href="about.html">ABOUT</a>
+        <a href="privacy.html">PRIVACY POLICY</a>
+        <a href="mailto:support.virox@gmail.com">SUPPORT</a>
     </nav>
 
-    <!-- الواجهة الرئيسية -->
     <section class="hero">
         <h1>Discover Our Amazing Games</h1>
         <p>We build engaging, high-quality mobile games designed to bring joy to millions of players worldwide.</p>
-        <a href="https://play.google.com" target="_blank" class="btn-download">GET IT ON GOOGLE PLAY</a>
+        <a href="https://play.google.com/store/apps/developer?id=VIROX" target="_blank" class="btn-download">GET IT ON GOOGLE PLAY</a>
     </section>
 
-    <!-- ألعاب الاستوديو -->
     <div class="games-section">
         <h2>Our Featured Games</h2>
         <div class="games-grid">
             <div class="game-card">
                 <h3>Virox Runner</h3>
                 <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Exciting adventure game.</p>
-                <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+                <a href="https://play.google.com/store/apps/details?id=com.virox.runner" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
             </div>
             <div class="game-card">
                 <h3>Virox Puzzle</h3>
                 <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Challenge your brain.</p>
-                <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+                <a href="https://play.google.com/store/apps/details?id=com.virox.puzzle" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
             </div>
         </div>
     </div>
 
-    <!-- الفوتر -->
     <footer>
         &copy; 2026 Virox Games Studio. All Rights Reserved.
     </footer>
