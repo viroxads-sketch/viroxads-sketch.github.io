@@ -96,20 +96,28 @@
         .games-grid {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             flex-wrap: wrap;
         }
         .game-card {
             background: white;
             padding: 20px;
             border-radius: 12px;
-            width: 220px;
+            width: 250px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
             text-align: center;
         }
+        .game-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+            object-fit: cover;
+            background: #eee;
+        }
         .game-card h3 {
             font-size: 18px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #222;
         }
         footer {
@@ -145,16 +153,20 @@
     <div class="games-section">
         <h2>Our Featured Games</h2>
         <div class="games-grid">
+            <!-- لعبة Bol Jump -->
             <div class="game-card">
-                <h3>Virox Runner</h3>
-                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Exciting adventure game.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.virox.runner" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+                <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon">
+                <h3>Bol Jump</h3>
+                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Exciting jumping adventure.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.virox.boljump" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
             </div>
-            <div class="game-card">
-                <h3>Virox Puzzle</h3>
-                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Challenge your brain.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.virox.puzzle" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
-            </div>
+
+           <!-- لعبة Lex Ball -->
+           <div class="game-card">
+            <img src="Lex-ball.jpg" alt="Lex Ball" class="game-icon">
+            <h3>Lex Ball</h3>
+            <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; cursor: default;" onclick="return false;">Coming soon</a>
+        </div>
         </div>
     </div>
 
