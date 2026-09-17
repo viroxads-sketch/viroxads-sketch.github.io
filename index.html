@@ -1,1 +1,176 @@
-<h1>VIROX Ads</h1>
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virox Games Studio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* الهيدر وشعار الشركة */
+        header {
+            text-align: center;
+            padding: 40px 20px 20px 20px;
+            background: #ffffff;
+        }
+        .logo {
+            font-size: 36px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #111;
+            text-transform: uppercase;
+        }
+        .tagline {
+            font-size: 14px;
+            color: #666;
+            margin-top: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        /* القائمة العلوية */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            background: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eaeaea;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+        nav a {
+            text-decoration: none;
+            color: #222;
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover, nav a.active {
+            color: #007bff;
+        }
+        /* قسم العرض الرئيسي (Hero Section) */
+        .hero {
+            background: linear-gradient(135deg, #007bff, #00d2ff);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .hero h1 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+        .hero p {
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            opacity: 0.9;
+        }
+        .btn-download {
+            display: inline-block;
+            background: #000;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .btn-download:hover {
+            background: #333;
+        }
+        /* قسم عرض الألعاب بالأسفل */
+        .games-section {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+        .games-section h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            color: #444;
+        }
+        .games-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .game-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 220px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+        .game-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #222;
+        }
+        /* الفوتر (Bottom) */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #222;
+            color: #aaa;
+            font-size: 13px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- الهيدر -->
+    <header>
+        <div class="logo">VIROX GAMES</div>
+        <div class="tagline">Mobile Games Made For Fun, Friends, and Family</div>
+    </header>
+
+    <!-- شريط التنقل -->
+    <nav>
+        <a href="#" class="active">GAMES</a>
+        <a href="#">ABOUT</a>
+        <a href="#">PRIVACY POLICY</a>
+        <a href="#">SUPPORT</a>
+    </nav>
+
+    <!-- الواجهة الرئيسية -->
+    <section class="hero">
+        <h1>Discover Our Amazing Games</h1>
+        <p>We build engaging, high-quality mobile games designed to bring joy to millions of players worldwide.</p>
+        <a href="https://play.google.com" target="_blank" class="btn-download">GET IT ON GOOGLE PLAY</a>
+    </section>
+
+    <!-- ألعاب الاستوديو -->
+    <div class="games-section">
+        <h2>Our Featured Games</h2>
+        <div class="games-grid">
+            <div class="game-card">
+                <h3>Virox Runner</h3>
+                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Exciting adventure game.</p>
+                <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+            </div>
+            <div class="game-card">
+                <h3>Virox Puzzle</h3>
+                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Challenge your brain.</p>
+                <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفوتر -->
+    <footer>
+        &copy; 2026 Virox Games Studio. All Rights Reserved.
+    </footer>
+
+</body>
+</html>
