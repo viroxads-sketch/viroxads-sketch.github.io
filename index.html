@@ -4,138 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virox Games Studio</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        header {
-            text-align: center;
-            padding: 40px 20px 20px 20px;
-            background: #ffffff;
-        }
-        .logo {
-            font-size: 36px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            color: #111;
-            text-transform: uppercase;
-        }
-        .tagline {
-            font-size: 14px;
-            color: #666;
-            margin-top: 5px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            background: #ffffff;
-            padding: 15px 0;
-            border-bottom: 1px solid #eaeaea;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
-        }
-        nav a {
-            text-decoration: none;
-            color: #222;
-            font-weight: 600;
-            font-size: 15px;
-            transition: color 0.3s;
-        }
-        nav a:hover, nav a.active {
-            color: #007bff;
-        }
-        .hero {
-            background: linear-gradient(135deg, #007bff, #00d2ff);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
-        .hero h1 {
-            font-size: 40px;
-            margin-bottom: 15px;
-        }
-        .hero p {
-            font-size: 18px;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-            opacity: 0.9;
-        }
-        .btn-download {
-            display: inline-block;
-            background: #000;
-            color: #fff;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .btn-download:hover {
-            background: #333;
-        }
-        .games-section {
-            max-width: 1000px;
-            margin: 50px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-        .games-section h2 {
-            font-size: 24px;
-            margin-bottom: 30px;
-            color: #444;
-        }
-        .games-grid {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            flex-wrap: wrap;
-        }
-        .game-card {
-            background: white;
-            padding: 20px;
-            border-radius: 12px;
-            width: 250px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        .game-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 16px;
-            margin-bottom: 15px;
-            object-fit: cover;
-            background: #eee;
-        }
-        .game-card h3 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #222;
-        }
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #222;
-            color: #aaa;
-            font-size: 13px;
-            margin-top: 50px;
-        }
-    </style>
+    <!-- ربط ملف الـ CSS الخارجي -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">VIROX GAMES</div>
-        <div class="tagline">Mobile Games Made For Fun, Friends, and Family</div>
-    </header>
+<header>
+<a href="index.html">
+    <img src="Text-Only.png" alt="Virox Games Logo" class="logo-img">
+</a>
+</header>
 
     <nav>
         <a href="#" class="active">GAMES</a>
@@ -157,16 +35,16 @@
             <div class="game-card">
                 <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon">
                 <h3>Bol Jump</h3>
-                <p style="font-size: 13px; color: #666; margin-bottom: 15px;">Exciting jumping adventure.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.virox.boljump" target="_blank" style="color: #007bff; text-decoration: none; font-weight: bold;">View Details</a>
+                <p class="game-desc">Exciting jumping adventure.</p>
+                <a href="https://play.google.com/store/apps/details?id=com.boljump.game" target="_blank" class="game-link">View Details</a>
             </div>
 
            <!-- لعبة Lex Ball -->
            <div class="game-card">
-            <img src="Lex-ball.jpg" alt="Lex Ball" class="game-icon">
-            <h3>Lex Ball</h3>
-            <a href="#" style="color: #007bff; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 15px; cursor: default;" onclick="return false;">Coming soon</a>
-        </div>
+                <img src="Lex-ball.jpg" alt="Lex Ball" class="game-icon">
+                <h3>Lex Ball</h3>
+                <a href="#" class="game-link coming-soon" onclick="return false;">Coming soon</a>
+            </div>
         </div>
     </div>
 
