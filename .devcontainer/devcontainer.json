@@ -1,5 +1,11 @@
 {
   "name": "Virox Games Devcontainer",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
-  "postStartCommand": "npx live-server --open=/index.html"
+  "postStartCommand": "npx live-server",
+  "portsAttributes": {
+    "8080": {
+      "label": "Virox Website",
+      "onAutoForward": "openPreview"
+    }
+  }
 }
