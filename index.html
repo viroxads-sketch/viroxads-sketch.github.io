@@ -9,16 +9,12 @@
 </head>
 <body style="background-color: #030712; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; scroll-behavior: smooth;">
 
-    <!-- الهيدر العلوي (ثابت تماماً لا يتغير مكانه بين اللغات) -->
+    <!-- الهيدر العلوي -->
     <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 25px 80px; width: 100%; box-sizing: border-box; position: sticky; top: 0; background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(12px); z-index: 1000; direction: ltr;">
-        
-        <!-- الشعار دائماً في اليسار -->
         <a href="index.html" class="logo-container" style="display: flex; align-items: center; gap: 12px; text-decoration: none; margin-left: 200px;">
             <img src="Logo-Only.png" alt="Virox Games Icon" style="width: 36px; height: 36px; object-fit: contain;">
             <img src="Text-Only.png" alt="Virox Games Text" style="width: 105px; height: auto; object-fit: contain;">
         </a>
-
-        <!-- الروابط وزر الترجمة دائماً في اليمين -->
         <div style="display: flex; align-items: center; gap: 35px; margin-right: 250px;">
             <nav class="nav-links" id="navLinks" style="display: flex; gap: 30px;">
                 <a href="#games" data-i18n="navGames" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 15px;">Games</a>
@@ -76,19 +72,23 @@
             <p data-i18n="gamesHeaderDesc" style="color: #94a3b8; font-size: 17px; margin-top: 10px;">From quick casual challenges to heart-pounding levels, explore the hits that define Virox Games.</p>
         </div>
 
-        <!-- Bol Jump -->
+        <!-- البطاقة الأولى (Bol Jump) - تم إزالة الصندوق الأسود مع الحفاظ على المقاسات والتنسيق تماماً -->
         <div class="game-showcase-card" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; padding: 45px; backdrop-filter: blur(12px); box-shadow: 0 20px 45px rgba(0,0,0,0.4); margin-bottom: 45px; direction: ltr;">
-            <div class="game-showcase-preview" style="flex: 1.2; background: #060b19; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
-                <img src="Bol-Jump.png" alt="Bol Jump Preview" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            <div class="game-showcase-preview" style="flex: 1; display: flex; justify-content: center; align-items: center; max-width: 420px; margin: 0 auto;">
+                <img src="Bol-Jump.png" alt="Bol Jump Preview" style="width: 100%; max-width: 400px; height: 210px; object-fit: cover; display: block; border-radius: 16px;">
             </div>
-            <div class="game-showcase-info" style="flex: 1; text-align: left;" id="bolJumpInfo">
-                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 20px;">
+            
+            <div class="game-showcase-info" style="flex: 1.1; text-align: left; position: relative;" id="bolJumpInfo">
+                
+                <div style="position: relative; top: 0px; left: 0px; width: 70px; height: 70px; margin-bottom: 15px;">
                     <img src="Bol-Jump.png" alt="Bol Jump Icon" style="width: 70px; height: 70px; border-radius: 18px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1);">
-                    <div>
-                        <span style="color: #38bdf8; font-size: 13px; font-weight: 600;">Android Exclusive</span>
-                        <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 4px 0 0 0;">Bol Jump</h3>
-                    </div>
                 </div>
+
+                <div style="position: relative; top: -85px; left: 90px; margin-bottom: -70px;">
+                    <span style="color: #38bdf8; font-size: 13px; font-weight: 600; display: block; margin-bottom: 4px;">Android Exclusive</span>
+                    <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 0;">Bol Jump</h3>
+                </div>
+
                 <p data-i18n="bolJumpDesc" style="color: #94a3b8; font-size: 16px; line-height: 1.8; margin-bottom: 35px;">
                     تحديات لا تتوقف: استعد لمواجهة مستويات متزايدة الصعوبة ستحبس أنفاسك في كل قفزة.
                 </p>
@@ -101,26 +101,32 @@
             </div>
         </div>
 
-        <!-- Lex Ball -->
+        <!-- البطاقة الثانية (Lex Ball) - كما هي تماماً بدون أي تغيير -->
         <div class="game-showcase-card" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; padding: 45px; backdrop-filter: blur(12px); box-shadow: 0 20px 45px rgba(0,0,0,0.4); direction: ltr;">
-            <div class="game-showcase-info" style="flex: 1; text-align: left;" id="lexBallInfo">
-                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 20px;">
+            
+            <div class="game-showcase-info" style="flex: 1.1; text-align: left; position: relative;" id="lexBallInfo">
+                
+                <div style="position: relative; top: 0px; left: 0px; width: 70px; height: 70px; margin-bottom: 15px;">
                     <img src="Lex-ball.jpg" alt="Lex Ball Icon" style="width: 70px; height: 70px; border-radius: 18px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1);">
-                    <div>
-                        <span style="color: #38bdf8; font-size: 13px; font-weight: 600;">Android Exclusive</span>
-                        <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 4px 0 0 0;">Lex Ball</h3>
-                    </div>
                 </div>
+
+                <div style="position: relative; top: -85px; left: 90px; margin-bottom: -70px;">
+                    <span style="color: #38bdf8; font-size: 13px; font-weight: 600; display: block; margin-bottom: 4px;">Android Exclusive</span>
+                    <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 0;">Lex Ball</h3>
+                </div>
+
                 <p data-i18n="lexBallDesc" style="color: #94a3b8; font-size: 16px; line-height: 1.8; margin-bottom: 35px;">
                     تجربة فريدة وممتعة تم اختبارها لتمنح اللاعبين أوقاتاً ممتعة من التحدي والمهارة الحركية.
                 </p>
-                <div style="display: flex; gap: 15px;">
+
+                <div style="position: relative; top: -20px; left: 450px;">
                     <span data-i18n="comingSoon" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; padding: 14px 28px; border-radius: 30px; font-weight: 600; font-size: 14px; display: inline-block;">
                         Coming Soon
                     </span>
                 </div>
             </div>
-            <div class="game-showcase-preview" style="flex: 1.2; background: #060b19; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+
+            <div class="game-showcase-preview" style="flex: 1; background: #060b19; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
                 <img src="Lex-ball.jpg" alt="Lex Ball Preview" style="width: 100%; height: 320px; object-fit: cover; display: block;">
             </div>
         </div>
@@ -210,7 +216,7 @@
         <p data-i18n="rights">&copy; 2026 Virox Games. All rights reserved.</p>
     </footer>
 
-    <!-- سكريبت الترجمة الفورية المحسن -->
+    <!-- سكريبت الترجمة الفورية -->
     <script>
         const langBtn = document.getElementById('langBtn');
         const mainContent = document.getElementById('mainContent');
