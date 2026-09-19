@@ -1,58 +1,80 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Virox Games Studio</title>
-    <!-- أيقونة التبويب -->
     <link rel="icon" type="image/png" href="Logo-Only.png">
-    <!-- ربط ملف الـ CSS الخارجي -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header>
-    <a href="index.html" class="logo-container">
-        <img src="Logo-Only.png" alt="Virox Games Icon" class="logo-icon">
-        <img src="Text-Only.png" alt="Virox Games Text" class="logo-text">
-    </a>
-</header>
+    <!-- الهيدر يضم الشعار (1) وروابط التنقل (2) في سطر واحد -->
+    <header class="main-header">
+        <a href="index.html" class="logo-container">
+            <img src="Logo-Only.png" alt="Virox Games Icon" class="logo-icon">
+            <img src="Text-Only.png" alt="Virox Games Text" class="logo-text">
+        </a>
+        <nav class="nav-links">
+            <a href="index.html" class="active">Games</a>
+            <a href="about.html">About</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="#" class="lang-btn">عربي</a>
+        </nav>
+    </header>
 
-    <nav>
-        <a href="#" class="active">GAMES</a>
-        <a href="about.html">ABOUT</a>
-        <a href="privacy.html">PRIVACY POLICY</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=support.virox@gmail.com" target="_blank">SUPPORT</a>
-    </nav>
+    <!-- القسم الرئيسي (3) و (4) -->
+    <main class="hero-section">
+        <div class="hero-content">
+            <div class="hero-tag">VIROX GAMES · PART OF YOUR STUDIO</div>
+            <h1>Mobile games the whole world plays</h1>
+            <p>Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play and the App Store.</p>
+            <div class="hero-buttons">
+                <a href="#games" class="btn-primary">Explore our games</a>
+                <a href="about.html" class="btn-secondary">Contact us</a>
+            </div>
+        </div>
 
-    <section class="hero">
-        <h1>Discover Our Amazing Games</h1>
-        <p>We build engaging, high-quality mobile games designed to bring joy to millions of players worldwide.</p>
-        <a href="https://play.google.com/store/apps/developer?id=VIROX" target="_blank" class="btn-download">GET IT ON GOOGLE PLAY</a>
+        <!-- أيقونات الألعاب المتحركة التي تطفو بالفضاء (4) -->
+        <!-- أيقونات الألعاب المتحركة (Bol Jump و Lex Ball) -->
+        <!-- أيقونات الألعاب المتحركة (Bol Jump و Lex Ball) -->
+        <div class="floating-games">
+            <div class="floating-icon"><img src="Bol-Jump.png" alt="Bol Jump"></div>
+            <div class="floating-icon"><img src="Lex-ball.jpg" alt="Lex Ball"></div>
+        </div>
+    </main>
+
+    <!-- قسم الإحصائيات (5) -->
+    <section class="stats-section">
+        <div class="stat-card">
+            <h3>10B+</h3>
+            <p>Total Downloads</p>
+        </div>
+        <div class="stat-card">
+            <h3>200+</h3>
+            <p>Active Players</p>
+        </div>
+        <div class="stat-card">
+            <h3>500M+</h3>
+            <p>App Store Hits</p>
+        </div>
     </section>
 
-    <div class="games-section">
+    <!-- قسم ألعابنا المتميزة -->
+    <section id="games" class="games-section">
         <h2>Our Featured Games</h2>
         <div class="games-grid">
-            <!-- لعبة Bol Jump -->
             <div class="game-card">
                 <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon">
                 <h3>Bol Jump</h3>
-                <p class="game-desc">Exciting jumping adventure.</p>
-                <a href="https://play.google.com/store/apps/details?id=com.boljump.game" target="_blank" class="game-link">View Details</a>
-            </div>
-
-           <!-- لعبة Lex Ball -->
-           <div class="game-card">
-                <img src="Lex-ball.jpg" alt="Lex Ball" class="game-icon">
-                <h3>Lex Ball</h3>
-                <a href="#" class="game-link coming-soon" onclick="return false;">Coming soon</a>
+                <p class="game-desc">Experience the ultimate jumping adventure in vibrant worlds.</p>
+                <a href="#" class="game-link">Google Play</a>
             </div>
         </div>
-    </div>
+    </section>
 
     <footer>
-        &copy; 2026 Virox Games Studio. All Rights Reserved.
+        <p>&copy; 2026 Virox Games. All rights reserved.</p>
     </footer>
 
 </body>
