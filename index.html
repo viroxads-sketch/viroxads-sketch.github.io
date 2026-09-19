@@ -9,76 +9,84 @@
 </head>
 <body>
 
-    <header class="main-header">
-        <a href="index.html" class="logo-container">
-            <img src="Logo-Only.png" alt="Virox Games Icon" class="logo-icon">
-            <img src="Text-Only.png" alt="Virox Games Text" class="logo-text">
+    <!-- الهيدر المعدل: الشعار أقصى اليسار، والروابط بجانب زر اللغة في أقصى اليمين -->
+    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 80px; width: 100%;">
+        
+        <!-- الشعار في أقصى اليسار بخط واحد -->
+        <a href="index.html" class="logo-container" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <img src="Logo-Only.png" alt="Virox Games Icon" style="width: 45px; height: 45px; object-fit: contain;">
+            <img src="Text-Only.png" alt="Virox Games Text" style="width: 120px; height: auto; object-fit: contain;">
         </a>
-        <nav class="nav-links">
-            <a href="index.html" class="active">Games</a>
-            <a href="about.html">About</a>
-            <a href="privacy.html">Privacy Policy</a>
-            <a href="#" class="lang-btn">عربي</a>
-        </nav>
+
+        <!-- الروابط وزر الترجمة مجتمعين في أقصى اليمين بجانب بعضهما -->
+        <div style="display: flex; align-items: center; gap: 35px;">
+            <nav class="nav-links" style="display: flex; gap: 30px;">
+                <a href="index.html" class="active" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 16px;">Games</a>
+                <a href="about.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 16px;">About</a>
+                <a href="privacy.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 16px;">Privacy Policy</a>
+            </nav>
+            <a href="#" class="lang-btn" style="background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; text-decoration: none; font-size: 15px;">عربي</a>
+        </div>
     </header>
 
-    <main class="hero-section">
-        <div class="hero-content">
-            <div class="hero-tag">VIROX GAMES · PART OF YOUR STUDIO</div>
-            <h1>Mobile games the whole world plays</h1>
-            <p>Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play and the App Store.</p>
-            <div class="hero-buttons">
-                <a href="#games" class="btn-primary">Explore our games</a>
-                <a href="about.html" class="btn-secondary">Contact us</a>
+    <!-- قسم الهيرو بنصوص ضخمة وموزعة بدقة -->
+    <main class="hero-section" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1500px; margin: 40px auto; padding: 0 80px;">
+        <div class="hero-content" style="max-width: 750px;">
+            <div class="hero-tag" style="font-size: 14px; letter-spacing: 3px; color: #38bdf8; margin-bottom: 25px; font-weight: bold;">VIROX GAMES · PART OF YOUR STUDIO</div>
+            <h1 style="font-size: 68px; line-height: 1.05; margin-bottom: 30px; color: #ffffff; font-weight: 800;">Mobile games the whole world plays</h1>
+            <p style="font-size: 19px; color: #94a3b8; line-height: 1.8; margin-bottom: 40px;">Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play and the App Store.</p>
+            <div class="hero-buttons" style="display: flex; gap: 20px;">
+                <a href="#games" class="btn-primary" style="background: #2563eb; color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);">Explore our games</a>
+                <a href="about.html" class="btn-secondary" style="background: rgba(255, 255, 255, 0.05); color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid rgba(255, 255, 255, 0.15);">Contact us</a>
             </div>
         </div>
 
-        <!-- تعديل اتجاه الميلان بزاوية موجبة نحو الأعلى واليمين -->
-        <div class="floating-games" style="display: flex; gap: 25px; transform: rotate(10deg) translateY(-10px); position: relative;">
-            <div class="floating-icon" style="width: 110px; height: 110px; background: rgba(15, 23, 42, 0.9); border-radius: 24px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite;">
-                <img src="Bol-Jump.png" alt="Bol Jump" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+        <!-- الأيقونات العائمة بالميلان الصحيح نحو الأعلى واليمين -->
+        <div class="floating-games" style="display: flex; gap: 25px; transform: rotate(12deg) translateY(-10px); position: relative;">
+            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite;">
+                <img src="Bol-Jump.png" alt="Bol Jump" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
             </div>
-            <div class="floating-icon" style="width: 110px; height: 110px; background: rgba(15, 23, 42, 0.9); border-radius: 24px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 20px 50px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite; animation-delay: 2s; transform: translateY(25px);">
-                <img src="Lex-ball.jpg" alt="Lex Ball" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite; animation-delay: 2s; transform: translateY(35px);">
+                <img src="Lex-ball.jpg" alt="Lex Ball" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
             </div>
         </div>
     </main>
 
-    <section class="stats-section">
-        <div class="stat-card">
-            <h3>10B+</h3>
-            <p>Total Downloads</p>
+    <section class="stats-section" style="display: flex; justify-content: center; gap: 35px; width: 100%; max-width: 1400px; margin: 90px auto 60px auto; padding: 0 80px;">
+        <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
+            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">10B+</h3>
+            <p style="color: #94a3b8; font-size: 16px;">Total Downloads</p>
         </div>
-        <div class="stat-card">
-            <h3>200+</h3>
-            <p>Active Players</p>
+        <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
+            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">200+</h3>
+            <p style="color: #94a3b8; font-size: 16px;">Active Players</p>
         </div>
-        <div class="stat-card">
-            <h3>500M+</h3>
-            <p>App Store Hits</p>
+        <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
+            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">500M+</h3>
+            <p style="color: #94a3b8; font-size: 16px;">App Store Hits</p>
         </div>
     </section>
 
-    <section id="games" class="games-section">
-        <h2>Our Featured Games</h2>
-        <div class="games-grid">
-            <div class="game-card">
-                <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon">
-                <h3>Bol Jump</h3>
-                <p class="game-desc">Experience the ultimate jumping adventure in vibrant worlds.</p>
-                <a href="#" class="game-link">Google Play</a>
+    <section id="games" class="games-section" style="max-width: 1400px; margin: 70px auto; padding: 0 80px; text-align: center;">
+        <h2 style="font-size: 34px; margin-bottom: 35px; font-weight: 700;">Our Featured Games</h2>
+        <div class="games-grid" style="display: flex; justify-content: center; gap: 30px;">
+            <div class="game-card" style="background: rgba(10, 17, 40, 0.85); padding: 30px; border-radius: 24px; width: 290px; border: 1px solid rgba(255, 255, 255, 0.08); text-align: center;">
+                <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon" style="width: 90px; height: 90px; border-radius: 18px; margin-bottom: 18px; object-fit: cover;">
+                <h3 style="font-size: 20px; margin-bottom: 10px;">Bol Jump</h3>
+                <p class="game-desc" style="font-size: 14px; color: #94a3b8; margin-bottom: 18px;">Experience the ultimate jumping adventure in vibrant worlds.</p>
+                <a href="#" class="game-link" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 15px;">Google Play</a>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer style="text-align: center; padding: 45px; color: #64748b; font-size: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 90px;">
         <p>&copy; 2026 Virox Games. All rights reserved.</p>
     </footer>
 
     <style>
         @keyframes floatWide {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-30px) rotate(6deg); }
+            50% { transform: translateY(-35px) rotate(8deg); }
         }
     </style>
 </body>
