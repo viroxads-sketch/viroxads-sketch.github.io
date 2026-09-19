@@ -310,10 +310,8 @@
             e.preventDefault();
             currentLang = currentLang === 'en' ? 'ar' : 'en';
             
-            // تغيير نص زر الترجمة
             langBtn.textContent = currentLang === 'en' ? 'عربي' : 'English';
 
-            // ضبط المحاذاة واتجاه النص حسب اللغة بدون تحريك أماكن الهيدر
             const alignDir = currentLang === 'ar' ? 'rtl' : 'ltr';
             
             mainContent.style.direction = alignDir;
@@ -337,7 +335,6 @@
             contactsBox.style.direction = alignDir;
             contactsBox.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
 
-            // تطبيق الترجمات على النصوص
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
