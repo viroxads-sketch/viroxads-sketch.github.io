@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" id="htmlRoot">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,87 +7,344 @@
     <link rel="icon" type="image/png" href="Logo-Only.png">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body style="background-color: #030712; color: #ffffff; font-family: system-ui, -apple-system, sans-serif; margin: 0; padding: 0; scroll-behavior: smooth;">
 
-    <!-- الهيدر العلوي: الشعار والاسم في أقصى اليسار، الروابط وزر الترجمة بلونه الشفاف السابق في أقصى اليمين -->
-    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 25px 80px; width: 100%;">
+    <!-- الهيدر العلوي (ثابت تماماً لا يتغير مكانه بين اللغات) -->
+    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 25px 80px; width: 100%; box-sizing: border-box; position: sticky; top: 0; background: rgba(3, 7, 18, 0.85); backdrop-filter: blur(12px); z-index: 1000; direction: ltr;">
         
-        <!-- الشعار واسم الشركة في أقصى اليسار -->
+        <!-- الشعار دائماً في اليسار -->
         <a href="index.html" class="logo-container" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
             <img src="Logo-Only.png" alt="Virox Games Icon" style="width: 36px; height: 36px; object-fit: contain;">
             <img src="Text-Only.png" alt="Virox Games Text" style="width: 105px; height: auto; object-fit: contain;">
         </a>
 
-        <!-- الروابط وزر الترجمة بلونه السابق في أقصى اليمين -->
+        <!-- الروابط وزر الترجمة دائماً في اليمين -->
         <div style="display: flex; align-items: center; gap: 35px;">
-            <nav class="nav-links" style="display: flex; gap: 30px;">
-                <a href="index.html" class="active" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 15px;">Games</a>
-                <a href="about.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">About</a>
-                <a href="privacy.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">Privacy Policy</a>
+            <nav class="nav-links" id="navLinks" style="display: flex; gap: 30px;">
+                <a href="#games" data-i18n="navGames" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 15px;">Games</a>
+                <a href="#about" data-i18n="navAbout" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">About</a>
+                <a href="#contacts" data-i18n="navContacts" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">Contacts</a>
+                <a href="privacy.html" data-i18n="navPrivacy" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">Privacy Policy</a>
             </nav>
-            <a href="#" class="lang-btn" style="background: rgba(255, 255, 255, 0.08); padding: 8px 20px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; text-decoration: none; font-size: 14px;">عربي</a>
+            <a href="#" id="langBtn" class="lang-btn" style="background: rgba(255, 255, 255, 0.08); padding: 8px 20px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; text-decoration: none; font-size: 14px;">عربي</a>
         </div>
     </header>
 
     <!-- قسم الهيرو -->
-    <main class="hero-section" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1500px; margin: 30px auto; padding: 0 80px;">
+    <main class="hero-section" id="mainContent" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1500px; margin: 100px auto 30px auto; padding: 0 80px; box-sizing: border-box; text-align: left; direction: ltr;">
         <div class="hero-content" style="max-width: 750px;">
-            <div class="hero-tag" style="font-size: 13px; letter-spacing: 2.5px; color: #38bdf8; margin-bottom: 20px; font-weight: bold;">VIROX GAMES · PART OF YOUR STUDIO</div>
-            <h1 style="font-size: 68px; line-height: 1.05; margin-bottom: 30px; color: #ffffff; font-weight: 800;">Mobile games the whole world plays</h1>
-            <p style="font-size: 19px; color: #94a3b8; line-height: 1.8; margin-bottom: 40px;">Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play and the App Store.</p>
+            <div class="hero-tag" data-i18n="heroTag" style="font-size: 13px; letter-spacing: 2.5px; color: #38bdf8; margin-bottom: 20px; font-weight: bold;">VIROX GAMES · STUDIO</div>
+            <h1 data-i18n="heroTitle" style="font-size: 68px; line-height: 1.05; margin-bottom: 30px; color: #ffffff; font-weight: 800;">Mobile games the whole world plays</h1>
+            <p data-i18n="heroDesc" style="font-size: 19px; color: #94a3b8; line-height: 1.8; margin-bottom: 40px;">Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play.</p>
             <div class="hero-buttons" style="display: flex; gap: 20px;">
-                <a href="#games" class="btn-primary" style="background: #2563eb; color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);">Explore our games</a>
-                <a href="about.html" class="btn-secondary" style="background: rgba(255, 255, 255, 0.05); color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid rgba(255, 255, 255, 0.15);">Contact us</a>
+                <a href="#games" data-i18n="exploreBtn" class="btn-primary" style="background: #2563eb; color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; box-shadow: 0 6px 25px rgba(37, 99, 235, 0.5);">Explore our games</a>
+                <a href="#about" data-i18n="aboutBtn" class="btn-secondary" style="background: rgba(255, 255, 255, 0.05); color: #ffffff; padding: 16px 36px; border-radius: 35px; text-decoration: none; font-weight: bold; font-size: 16px; border: 1px solid rgba(255, 255, 255, 0.15);">About us</a>
             </div>
         </div>
 
-        <!-- الأيقونات العائمة بالميلان الصحيح نحو الأعلى واليمين -->
         <div class="floating-games" style="display: flex; gap: 25px; transform: rotate(12deg) translateY(-10px); position: relative;">
-            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite;">
+            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8);">
                 <img src="Bol-Jump.png" alt="Bol Jump" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
             </div>
-            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite; animation-delay: 2s; transform: translateY(35px);">
+            <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); transform: translateY(35px);">
                 <img src="Lex-ball.jpg" alt="Lex Ball" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
             </div>
         </div>
     </main>
 
-    <section class="stats-section" style="display: flex; justify-content: center; gap: 35px; width: 100%; max-width: 1400px; margin: 90px auto 60px auto; padding: 0 80px;">
+    <!-- قسم الإحصائيات -->
+    <section class="stats-section" style="display: flex; justify-content: center; gap: 35px; width: 100%; max-width: 1400px; margin: 90px auto 60px auto; padding: 0 80px; box-sizing: border-box;">
         <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
-            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">10B+</h3>
-            <p style="color: #94a3b8; font-size: 16px;">Total Downloads</p>
+            <h3 data-i18n="stat1Title" style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">10B+</h3>
+            <p data-i18n="stat1Desc" style="color: #94a3b8; font-size: 16px;">Total Downloads</p>
         </div>
         <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
-            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">200+</h3>
-            <p style="color: #94a3b8; font-size: 16px;">Active Players</p>
+            <h3 data-i18n="stat2Title" style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">200+</h3>
+            <p data-i18n="stat2Desc" style="color: #94a3b8; font-size: 16px;">Active Players</p>
         </div>
         <div class="stat-card" style="background: rgba(10, 17, 40, 0.75); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); padding: 45px; border-radius: 24px; text-align: center; flex: 1; box-shadow: 0 12px 35px rgba(0,0,0,0.5);">
-            <h3 style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">500M+</h3>
-            <p style="color: #94a3b8; font-size: 16px;">App Store Hits</p>
+            <h3 data-i18n="stat3Title" style="font-size: 48px; color: #ffffff; margin-bottom: 10px; font-weight: 800;">500M+</h3>
+            <p data-i18n="stat3Desc" style="color: #94a3b8; font-size: 16px;">App Store Hits</p>
         </div>
     </section>
 
-    <section id="games" class="games-section" style="max-width: 1400px; margin: 70px auto; padding: 0 80px; text-align: center;">
-        <h2 style="font-size: 34px; margin-bottom: 35px; font-weight: 700;">Our Featured Games</h2>
-        <div class="games-grid" style="display: flex; justify-content: center; gap: 30px;">
-            <div class="game-card" style="background: rgba(10, 17, 40, 0.85); padding: 30px; border-radius: 24px; width: 290px; border: 1px solid rgba(255, 255, 255, 0.08); text-align: center;">
-                <img src="Bol-Jump.png" alt="Bol Jump" class="game-icon" style="width: 90px; height: 90px; border-radius: 18px; margin-bottom: 18px; object-fit: cover;">
-                <h3 style="font-size: 20px; margin-bottom: 10px;">Bol Jump</h3>
-                <p class="game-desc" style="font-size: 14px; color: #94a3b8; margin-bottom: 18px;">Experience the ultimate jumping adventure in vibrant worlds.</p>
-                <a href="#" class="game-link" style="color: #38bdf8; text-decoration: none; font-weight: bold; font-size: 15px;">Google Play</a>
+    <!-- قسم الألعاب المميزة -->
+    <section id="games" class="featured-showcase" style="max-width: 1400px; margin: 100px auto; padding: 0 80px; box-sizing: border-box;">
+        <div class="section-header" id="gamesHeader" style="margin-bottom: 60px; text-align: left; direction: ltr;">
+            <span data-i18n="gamesHeaderTag" style="color: #38bdf8; font-size: 13px; letter-spacing: 2.5px; font-weight: bold; text-transform: uppercase;">Our Games</span>
+            <h2 data-i18n="gamesHeaderTitle" style="color: #ffffff; font-size: 42px; font-weight: 800; margin-top: 10px;">Where every tap leads to a new adventure</h2>
+            <p data-i18n="gamesHeaderDesc" style="color: #94a3b8; font-size: 17px; margin-top: 10px;">From quick casual challenges to heart-pounding levels, explore the hits that define Virox Games.</p>
+        </div>
+
+        <!-- Bol Jump -->
+        <div class="game-showcase-card" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; padding: 45px; backdrop-filter: blur(12px); box-shadow: 0 20px 45px rgba(0,0,0,0.4); margin-bottom: 45px; direction: ltr;">
+            <div class="game-showcase-preview" style="flex: 1.2; background: #060b19; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <img src="Bol-Jump.png" alt="Bol Jump Preview" style="width: 100%; height: 320px; object-fit: cover; display: block;">
+            </div>
+            <div class="game-showcase-info" style="flex: 1; text-align: left;" id="bolJumpInfo">
+                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 20px;">
+                    <img src="Bol-Jump.png" alt="Bol Jump Icon" style="width: 70px; height: 70px; border-radius: 18px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1);">
+                    <div>
+                        <span style="color: #38bdf8; font-size: 13px; font-weight: 600;">Android Exclusive</span>
+                        <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 4px 0 0 0;">Bol Jump</h3>
+                    </div>
+                </div>
+                <p data-i18n="bolJumpDesc" style="color: #94a3b8; font-size: 16px; line-height: 1.8; margin-bottom: 35px;">
+                    تحديات لا تتوقف: استعد لمواجهة مستويات متزايدة الصعوبة ستحبس أنفاسك في كل قفزة.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="https://play.google.com/store/apps/details?id=com.boljump.game" target="_blank" style="background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.12); color: #fff; padding: 14px 28px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 10px;">
+                        <svg style="width: 18px; height: 18px; fill: #38bdf8;" viewBox="0 0 24 24"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                        Google Play
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lex Ball -->
+        <div class="game-showcase-card" style="display: flex; align-items: center; justify-content: space-between; gap: 60px; background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 28px; padding: 45px; backdrop-filter: blur(12px); box-shadow: 0 20px 45px rgba(0,0,0,0.4); direction: ltr;">
+            <div class="game-showcase-info" style="flex: 1; text-align: left;" id="lexBallInfo">
+                <div style="display: flex; align-items: center; gap: 18px; margin-bottom: 20px;">
+                    <img src="Lex-ball.jpg" alt="Lex Ball Icon" style="width: 70px; height: 70px; border-radius: 18px; object-fit: cover; border: 1px solid rgba(255,255,255,0.1);">
+                    <div>
+                        <span style="color: #38bdf8; font-size: 13px; font-weight: 600;">Android Exclusive</span>
+                        <h3 style="color: #ffffff; font-size: 30px; font-weight: 800; margin: 4px 0 0 0;">Lex Ball</h3>
+                    </div>
+                </div>
+                <p data-i18n="lexBallDesc" style="color: #94a3b8; font-size: 16px; line-height: 1.8; margin-bottom: 35px;">
+                    تجربة فريدة وممتعة تم اختبارها لتمنح اللاعبين أوقاتاً ممتعة من التحدي والمهارة الحركية.
+                </p>
+                <div style="display: flex; gap: 15px;">
+                    <span data-i18n="comingSoon" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; padding: 14px 28px; border-radius: 30px; font-weight: 600; font-size: 14px; display: inline-block;">
+                        Coming Soon
+                    </span>
+                </div>
+            </div>
+            <div class="game-showcase-preview" style="flex: 1.2; background: #060b19; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.1);">
+                <img src="Lex-ball.jpg" alt="Lex Ball Preview" style="width: 100%; height: 320px; object-fit: cover; display: block;">
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 45px; color: #64748b; font-size: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 90px;">
-        <p>&copy; 2026 Virox Games. All rights reserved.</p>
+    <!-- قسم About Us -->
+    <section id="about" style="max-width: 1400px; margin: 120px auto; padding: 0 80px; box-sizing: border-box;">
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 80px; direction: ltr;">
+            <div style="flex: 1; max-width: 600px; text-align: left;" id="aboutTextContainer">
+                <span data-i18n="aboutTag" style="color: #38bdf8; font-size: 13px; letter-spacing: 2.5px; font-weight: bold; text-transform: uppercase;">About Us</span>
+                <h1 data-i18n="aboutTitle" style="font-size: 52px; line-height: 1.1; margin: 15px 0 30px 0; color: #ffffff; font-weight: 800;">
+                    Crafting the future of mobile entertainment
+                </h1>
+                <p data-i18n="aboutText1" style="font-size: 17px; color: #94a3b8; line-height: 1.8; margin-bottom: 20px;">
+                    <strong style="color: #fff;">Virox Games</strong> is an independent mobile games studio dedicated to building fun, engaging, and polished gaming experiences for players everywhere. 
+                </p>
+                <p data-i18n="aboutText2" style="font-size: 17px; color: #94a3b8; line-height: 1.8; margin-bottom: 20px;">
+                    Our core focus centers on creative mechanics and smooth performance — bringing titles like <strong style="color: #fff;">Bol Jump</strong> and <strong style="color: #fff;">Lex Ball</strong> to life. We believe in games that are easy to pick up, hard to put down, and endlessly satisfying.
+                </p>
+                <p data-i18n="aboutText3" style="font-size: 17px; color: #94a3b8; line-height: 1.8;">
+                    From initial concept to final release on Google Play, our team pours passion into every single tap, level, and feature we ship.
+                </p>
+            </div>
+
+            <div style="flex: 1; display: flex; flex-direction: column; gap: 24px; max-width: 600px; text-align: left;" id="aboutCardsContainer">
+                <div style="background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <span style="width: 8px; height: 8px; background: #38bdf8; border-radius: 50%; display: inline-block;"></span>
+                        <h3 data-i18n="card1Title" style="margin: 0; font-size: 20px; color: #ffffff; font-weight: 700;">Passionate Design</h3>
+                    </div>
+                    <p data-i18n="card1Desc" style="margin: 0; color: #94a3b8; font-size: 15px; line-height: 1.6;">
+                        Every game we release is carefully engineered with fluid controls, vibrant visuals, and immersive casual gameplay loops.
+                    </p>
+                </div>
+
+                <div style="background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <span style="width: 8px; height: 8px; background: #38bdf8; border-radius: 50%; display: inline-block;"></span>
+                        <h3 data-i18n="card2Title" style="margin: 0; font-size: 20px; color: #ffffff; font-weight: 700;">Growing Portfolio</h3>
+                    </div>
+                    <p data-i18n="card2Desc" style="margin: 0; color: #94a3b8; font-size: 15px; line-height: 1.6;">
+                        Led by flagship titles like Bol Jump and upcoming releases like Lex Ball, our library continues to expand with fresh experiences.
+                    </p>
+                </div>
+
+                <div style="background: rgba(10, 17, 40, 0.6); border: 1px solid rgba(255, 255, 255, 0.08); backdrop-filter: blur(12px); padding: 32px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                        <span style="width: 8px; height: 8px; background: #38bdf8; border-radius: 50%; display: inline-block;"></span>
+                        <h3 data-i18n="card3Title" style="margin: 0; font-size: 20px; color: #ffffff; font-weight: 700;">Player-Centric Approach</h3>
+                    </div>
+                    <p data-i18n="card3Desc" style="margin: 0; color: #94a3b8; font-size: 15px; line-height: 1.6;">
+                        We listen closely to our community, ensuring regular performance updates, fair progression, and maximum fun.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم Contacts -->
+    <section id="contacts" style="max-width: 1400px; margin: 120px auto; padding: 0 80px; box-sizing: border-box;">
+        <div id="contactsBox" style="background: linear-gradient(135deg, rgba(10, 17, 40, 0.85) 0%, rgba(6, 11, 25, 0.95) 100%); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 32px; padding: 70px; backdrop-filter: blur(16px); box-shadow: 0 25px 60px rgba(0,0,0,0.6); text-align: left; direction: ltr;">
+            
+            <h2 data-i18n="contactsTitle" style="color: #ffffff; font-size: 42px; font-weight: 800; margin: 0 0 12px 0;">Contacts</h2>
+            <p data-i18n="contactsDesc" style="color: #94a3b8; font-size: 17px; margin: 0 0 45px 0;">Questions about our games, partnership, or anything else — drop us a line.</p>
+
+            <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+                <div style="flex: 1; min-width: 280px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 35px;">
+                    <span data-i18n="emailLabel" style="color: #38bdf8; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 12px;">Email</span>
+                    <a href="mailto:support.virox@gmail.com" style="color: #ffffff; font-size: 22px; font-weight: 700; text-decoration: none; display: inline-block;">
+                        support.virox@gmail.com
+                    </a>
+                </div>
+
+                <div style="flex: 1; min-width: 280px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.06); border-radius: 20px; padding: 35px;">
+                    <span data-i18n="officeLabel" style="color: #38bdf8; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 12px;">Studio Office</span>
+                    <p style="color: #ffffff; font-size: 17px; font-weight: 600; margin: 0 0 6px 0;">Virox Games Studio</p>
+                    <p data-i18n="officeText" style="color: #94a3b8; font-size: 15px; line-height: 1.6; margin: 0;">
+                        Digital Development & Mobile Publishing<br>Global Remote Team
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer style="text-align: center; padding: 45px; color: #64748b; font-size: 15px; border-top: 1px solid rgba(255, 255, 255, 0.05); margin-top: 90px; direction: ltr;">
+        <p data-i18n="rights">&copy; 2026 Virox Games. All rights reserved.</p>
     </footer>
 
-    <style>
-        @keyframes floatWide {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-35px) rotate(8deg); }
-        }
-    </style>
+    <!-- سكريبت الترجمة الفورية المحسن -->
+    <script>
+        const langBtn = document.getElementById('langBtn');
+        const mainContent = document.getElementById('mainContent');
+        const gamesHeader = document.getElementById('gamesHeader');
+        const bolJumpInfo = document.getElementById('bolJumpInfo');
+        const lexBallInfo = document.getElementById('lexBallInfo');
+        const aboutTextContainer = document.getElementById('aboutTextContainer');
+        const aboutCardsContainer = document.getElementById('aboutCardsContainer');
+        const contactsBox = document.getElementById('contactsBox');
+
+        const translations = {
+            en: {
+                navGames: "Games",
+                navAbout: "About",
+                navContacts: "Contacts",
+                navPrivacy: "Privacy Policy",
+                heroTag: "VIROX GAMES · STUDIO",
+                heroTitle: "Mobile games the whole world plays",
+                heroDesc: "Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play.",
+                exploreBtn: "Explore our games",
+                aboutBtn: "About us",
+                stat1Title: "10B+",
+                stat1Desc: "Total Downloads",
+                stat2Title: "200+",
+                stat2Desc: "Active Players",
+                stat3Title: "500M+",
+                stat3Desc: "App Store Hits",
+                gamesHeaderTag: "Our Games",
+                gamesHeaderTitle: "Where every tap leads to a new adventure",
+                gamesHeaderDesc: "From quick casual challenges to heart-pounding levels, explore the hits that define Virox Games.",
+                bolJumpDesc: "تحديات لا تتوقف: استعد لمواجهة مستويات متزايدة الصعوبة ستحبس أنفاسك في كل قفزة.",
+                lexBallDesc: "تجربة فريدة وممتعة تم اختبارها لتمنح اللاعبين أوقاتاً ممتعة من التحدي والمهارة الحركية.",
+                comingSoon: "Coming Soon",
+                aboutTag: "About Us",
+                aboutTitle: "Crafting the future of mobile entertainment",
+                aboutText1: "<strong>Virox Games</strong> is an independent mobile games studio dedicated to building fun, engaging, and polished gaming experiences for players everywhere.",
+                aboutText2: "Our core focus centers on creative mechanics and smooth performance — bringing titles like <strong style=\"color: #fff;\">Bol Jump</strong> and <strong style=\"color: #fff;\">Lex Ball</strong> to life. We believe in games that are easy to pick up, hard to put down, and endlessly satisfying.",
+                aboutText3: "From initial concept to final release on Google Play, our team pours passion into every single tap, level, and feature we ship.",
+                card1Title: "Passionate Design",
+                card1Desc: "Every game we release is carefully engineered with fluid controls, vibrant visuals, and immersive casual gameplay loops.",
+                card2Title: "Growing Portfolio",
+                card2Desc: "Led by flagship titles like Bol Jump and upcoming releases like Lex Ball, our library continues to expand with fresh experiences.",
+                card3Title: "Player-Centric Approach",
+                card3Desc: "We listen closely to our community, ensuring regular performance updates, fair progression, and maximum fun.",
+                contactsTitle: "Contacts",
+                contactsDesc: "Questions about our games, partnership, or anything else — drop us a line.",
+                emailLabel: "Email",
+                officeLabel: "Studio Office",
+                officeText: "Digital Development & Mobile Publishing<br>Global Remote Team",
+                rights: "&copy; 2026 Virox Games. All rights reserved."
+            },
+            ar: {
+                navGames: "الألعاب",
+                navAbout: "من نحن",
+                navContacts: "اتصل بنا",
+                navPrivacy: "سياسة الخصوصية",
+                heroTag: "ألعاب فيروكس · استوديو",
+                heroTitle: "ألعاب موبايل يلعبها العالم أجمع",
+                heroDesc: "استوديو Virox Games هو ناشر شغوف بألعاب الهواتف المحمولة الخفيفة والممتعة. من المغامرات المشوقة إلى الألغاز المريحة - تم تثبيت ألعابنا ملايين المرات عبر جوجل بلاي.",
+                exploreBtn: "استكشف ألعابنا",
+                aboutBtn: "من نحن",
+                stat1Title: "+10 مليار",
+                stat1Desc: "إجمالي التحميلات",
+                stat2Title: "+200",
+                stat2Desc: "لاعب نشط",
+                stat3Title: "+500 مليون",
+                stat3Desc: "ضربات متجر التطبيقات",
+                gamesHeaderTag: "ألعابنا",
+                gamesHeaderTitle: "حيث تؤدي كل نقرة إلى مغامرة جديدة",
+                gamesHeaderDesc: "من التحديات السريعة إلى المستويات الحماسية، استكشف الألعاب التي تميز Virox Games.",
+                bolJumpDesc: "تحديات لا تتوقف: استعد لمواجهة مستويات متزايدة الصعوبة ستحبس أنفاسك في كل قفزة.",
+                lexBallDesc: "تجربة فريدة وممتعة تم اختبارها لتمنح اللاعبين أوقاتاً ممتعة من التحدي والمهارة الحركية.",
+                comingSoon: "قريباً",
+                aboutTag: "من نحن",
+                aboutTitle: "صياغة مستقبل الترفيه عبر الهاتف المحمول",
+                aboutText1: "<strong>Virox Games</strong> هو استوديو ألعاب مستقل للهواتف المحمولة مكرس لبناء تجارب ألعاب ممتعة وجذابة ومتقنة للاعبين في كل مكان.",
+                aboutText2: "ينصب تركيزنا الأساسي على الميكانيكيات الإبداعية والأداء السلس - وإحياء عناوين مثل <strong style=\"color: #fff;\">Bol Jump</strong> و <strong style=\"color: #fff;\">Lex Ball</strong>. نحن نؤمن بالألعاب السهلة في بدايتها، والتي يصعب تركها، والمليئة بالمتعة التي لا تنتهي.",
+                aboutText3: "من الفكرة الأولية وحتى الإصدار النهائي على جوجل بلاي، يسكب فريقنا شغفه في كل نقرة ومستوى وميزة نطلقها.",
+                card1Title: "تصميم مليء بالشغف",
+                card1Desc: "كل لعبة نطلقها مصممة بعناية فائقة مع تحكم سلس، ومرئيات نابضة بالحياة، وأسلوب لعب كاجوال غامر.",
+                card2Title: "محفظة أعمال متنامية",
+                card2Desc: "بقيادة الألعاب الرائدة مثل Bol Jump والإصدارات القادمة مثل Lex Ball، تستمر مكتبتنا في التوسع بتجارب جديدة.",
+                card3Title: "نهج يركز على اللاعب",
+                card3Desc: "نحن نستمع عن قرب إلى مجتمعنا، مما يضمن تحديثات أداء منتظمة، وتدرجاً عادلاً، ومتعة قصوى.",
+                contactsTitle: "اتصل بنا",
+                contactsDesc: "أسئلة حول ألعابنا، شراكة، أو أي شيء آخر - تواصل معنا.",
+                emailLabel: "البريد الإلكتروني",
+                officeLabel: "مكتب الاستوديو",
+                officeText: "التطوير الرقمي ونشر ألعاب الهواتف<br>فريق عالمي عن بعد",
+                rights: "&copy; 2026 Virox Games. جميع الحقوق محفوظة."
+            }
+        };
+
+        let currentLang = 'en';
+
+        langBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentLang = currentLang === 'en' ? 'ar' : 'en';
+            
+            // تغيير نص زر الترجمة
+            langBtn.textContent = currentLang === 'en' ? 'عربي' : 'English';
+
+            // ضبط المحاذاة واتجاه النص حسب اللغة بدون تحريك أماكن الهيدر
+            const alignDir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            
+            mainContent.style.direction = alignDir;
+            mainContent.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            gamesHeader.style.direction = alignDir;
+            gamesHeader.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            bolJumpInfo.style.direction = alignDir;
+            bolJumpInfo.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            lexBallInfo.style.direction = alignDir;
+            lexBallInfo.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            aboutTextContainer.style.direction = alignDir;
+            aboutTextContainer.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            aboutCardsContainer.style.direction = alignDir;
+            aboutCardsContainer.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            contactsBox.style.direction = alignDir;
+            contactsBox.style.textAlign = currentLang === 'ar' ? 'right' : 'left';
+
+            // تطبيق الترجمات على النصوص
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerHTML = translations[currentLang][key];
+                }
+            });
+        });
+    </script>
 </body>
 </html>
