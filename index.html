@@ -9,31 +9,30 @@
 </head>
 <body>
 
-    <!-- الهيدر المعدل: الشعار أقصى اليسار، الروابط بجانبه، الأزرار يمينًا -->
-    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 30px 80px; width: 100%;">
-        <div style="display: flex; align-items: center; gap: 40px;">
-            <!-- الشعار بخط واحد (الأيقونة بجانب النص) -->
-            <a href="index.html" class="logo-container" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-                <img src="Logo-Only.png" alt="Virox Games Icon" style="width: 45px; height: 45px; object-fit: contain;">
-                <img src="Text-Only.png" alt="Virox Games Text" style="width: 120px; height: auto; object-fit: contain;">
-            </a>
-            <!-- روابط القائمة في المساحة المحددة بجانب الشعار -->
-            <nav class="nav-links" style="display: flex; gap: 35px;">
-                <a href="index.html" class="active" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 16px;">Games</a>
-                <a href="about.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 16px;">About</a>
-                <a href="privacy.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 16px;">Privacy Policy</a>
-            </nav>
-        </div>
+    <!-- الهيدر العلوي الاحترافي: الشعار والاسم في أقصى اليسار، والروابط وزر الترجمة في أقصى اليمين -->
+    <header class="main-header" style="display: flex; justify-content: space-between; align-items: center; padding: 25px 80px; width: 100%;">
         
-        <div style="display: flex; align-items: center; gap: 20px;">
-            <a href="#" class="lang-btn" style="background: rgba(255, 255, 255, 0.08); padding: 10px 22px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.1); color: #fff; text-decoration: none; font-size: 15px;">عربي</a>
+        <!-- الشعار واسم الشركة في أقصى اليسار بخط مستقيم واحد (مثل الموقع الثاني تماماً) -->
+        <a href="index.html" class="logo-container" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+            <img src="Logo-Only.png" alt="Virox Games Icon" style="width: 36px; height: 36px; object-fit: contain;">
+            <img src="Text-Only.png" alt="Virox Games Text" style="width: 105px; height: auto; object-fit: contain;">
+        </a>
+
+        <!-- الروابط وزر الترجمة في أقصى اليمين -->
+        <div style="display: flex; align-items: center; gap: 35px;">
+            <nav class="nav-links" style="display: flex; gap: 30px;">
+                <a href="index.html" class="active" style="text-decoration: none; color: #ffffff; font-weight: 600; font-size: 15px;">Games</a>
+                <a href="about.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">About</a>
+                <a href="privacy.html" style="text-decoration: none; color: #94a3b8; font-weight: 600; font-size: 15px;">Privacy Policy</a>
+            </nav>
+            <a href="#" class="lang-btn" style="background: rgba(255, 255, 255, 0.08); padding: 8px 20px; border-radius: 20px; border: 1px style="solid" rgba(255, 255, 255, 0.1); color: #fff; text-decoration: none; font-size: 14px;">عربي</a>
         </div>
     </header>
 
-    <!-- قسم الهيرو بنصوص أكبر وأوسع تماماً مثل الموقع الثاني -->
-    <main class="hero-section" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1500px; margin: 40px auto; padding: 0 80px;">
+    <!-- قسم الهيرو (تبدأ تحته مباشرة جملة التعريف والشعار الفرعي وباقي المحتوى) -->
+    <main class="hero-section" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1500px; margin: 30px auto; padding: 0 80px;">
         <div class="hero-content" style="max-width: 750px;">
-            <div class="hero-tag" style="font-size: 14px; letter-spacing: 3px; color: #38bdf8; margin-bottom: 25px; font-weight: bold;">VIROX GAMES · PART OF YOUR STUDIO</div>
+            <div class="hero-tag" style="font-size: 13px; letter-spacing: 2.5px; color: #38bdf8; margin-bottom: 20px; font-weight: bold;">VIROX GAMES · PART OF YOUR STUDIO</div>
             <h1 style="font-size: 68px; line-height: 1.05; margin-bottom: 30px; color: #ffffff; font-weight: 800;">Mobile games the whole world plays</h1>
             <p style="font-size: 19px; color: #94a3b8; line-height: 1.8; margin-bottom: 40px;">Virox Games is a passionate publisher of casual mobile hits. From thrilling adventures to relaxing puzzles — our games have been installed millions of times across Google Play and the App Store.</p>
             <div class="hero-buttons" style="display: flex; gap: 20px;">
@@ -42,7 +41,7 @@
             </div>
         </div>
 
-        <!-- الأيقونات العائمة بالميلان المطلوب نحو الأعلى واليمين -->
+        <!-- الأيقونات العائمة بالميلان الصحيح نحو الأعلى واليمين -->
         <div class="floating-games" style="display: flex; gap: 25px; transform: rotate(12deg) translateY(-10px); position: relative;">
             <div class="floating-icon" style="width: 125px; height: 125px; background: rgba(15, 23, 42, 0.9); border-radius: 28px; padding: 12px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 25px 60px rgba(0,0,0,0.8); animation: floatWide 4s ease-in-out infinite;">
                 <img src="Bol-Jump.png" alt="Bol Jump" style="width: 100%; height: 100%; object-fit: cover; border-radius: 18px;">
